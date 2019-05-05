@@ -132,3 +132,13 @@ void empty_matrix(unsigned short **matr, size_t v_num){
         }
     }
 }
+
+unsigned short min_path(std::string vertex1, std::string vertex2, unsigned short **matrix, List<std::string> *vertices){
+    int in1, in2;
+    in1 = vertices->find(vertex1);
+    in2 = vertices->find(vertex2);
+    if ((in1 == -1) || (in2 == -1))
+        throw std::invalid_argument("Wrong input");
+    unsigned short **min_paths = find_min_paths(vertices->get_size(), matrix);
+    return min_paths[in1][in2];
+}

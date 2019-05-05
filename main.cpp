@@ -44,6 +44,9 @@ int main(int argc, char* argv[]) {
     std::cout << std::endl << "Shortest paths: " << std::endl;
     print_matrix(vertices->get_size(), min_paths);
 
+    unsigned short res = min_path("Санкт-Петербург", "Хабаровск", matrix, vertices);
+    std::cout << res;
+
     return n;
 }
 
