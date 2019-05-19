@@ -140,5 +140,7 @@ unsigned short min_path(std::string vertex1, std::string vertex2, unsigned short
     if ((in1 == -1) || (in2 == -1))
         throw std::invalid_argument("Wrong input");
     unsigned short **min_paths = find_min_paths(vertices->get_size(), matrix);
+    if (min_paths[in1][in2] == 65535)
+        return 0;
     return min_paths[in1][in2];
 }

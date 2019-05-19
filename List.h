@@ -105,8 +105,6 @@ public:
     friend std::ostream& operator <<  <Data>(std::ostream &out, List *list);
 
 
-    friend class Graph;
-
 };
 
 
